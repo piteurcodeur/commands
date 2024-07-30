@@ -39,9 +39,9 @@ Options supplémentaires :
 Exemples : 
 
 >> cmdc -s -o
->> Entrer le nom du fichier : example.c
->> Le fichier example.c.h a ete cree avec succes.
->> Le fichier example.c.c a ete cree avec succes.
+>> Entrer le nom du fichier : example
+>> Le fichier example.h a ete cree avec succes.
+>> Le fichier example.c a ete cree avec succes.
 
 
 
