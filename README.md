@@ -1,18 +1,20 @@
 
-Projet de Création de fichiers en ligne de Commande pour C/C++ :
+# Projet de Création de fichiers en ligne de Commande pour C/C++ :
 
 ==========================================================================================================================
-Introduction : 
+## Introduction : 
 
 Ce projet est un outil en ligne de commande qui permet de créer des fichiers pour les langages de programmation C et C++. 
 Il est conçu pour simplifier la création de nouveaux projets et fichiers de code source.
 
 ==========================================================================================================================
 
-Création des outils : 
+## Création des outils : 
 
 Télécharger les fichiers sources, puis compiler en fichier .exe avec les commandes suivantes :
+'''powershell
 > g++ cmdc.cpp -o cmdc
+'''
 
 pour la commande de fichier C
 > g++ cmdcpp.cpp -o cmdcpp
