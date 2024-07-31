@@ -41,7 +41,7 @@ Options supplémentaires :
 >[-s]  ou  [-source]  : crée un fichier header .h du même nom que le fichier de code
 >[-o]  ou  [-open]    : ouvre le fichier dans l'éditeur de code 
 ```
-==========================================================================================================================
+
 
 Exemples : 
 ```cmd
