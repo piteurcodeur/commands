@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <stdbool.h>
+#include <string.h>
 using namespace std;
 
 #define VERSION 1.1f
@@ -14,6 +15,17 @@ std::string setName()
     return nomFichier;
 }
 
+char* toUpper(char* className)
+{
+    char temp;
+    for (unsigned i = 0; i < strlen(className); i++)
+    {
+        temp = className[i];
+        className[i] = toupper(temp);
+    }
+    return className;
+}
+
 void createSourceFile(std::string nomFichier)
 {
     std::ofstream fichier(nomFichier + ".h");
@@ -21,11 +33,14 @@ void createSourceFile(std::string nomFichier)
     // Vérifie si le fichier est bien ouvert
     if (fichier.is_open())
     {
+        fichier << "#ifndef "<< toUpper(nomFichier.data()) << "_H" << endl;
+        fichier << "#define "<< toUpper(nomFichier.data()) << "_H\n"<< endl;
         // Écrit les en-têtes d'include de base
-        fichier << "#include <iostream>\n";
-        fichier << "#include <string>\n\n";
-        fichier << "using namespace std;\n\n";
+        fichier << "#include <iostream>" <<endl;
+        fichier << "#include <string>" << endl;
+        fichier << "using namespace std;\n\n\n" << endl;
 
+        fichier << "#endif //"<< toUpper(nomFichier.data()) << "_H" << endl;
         // Ferme le fichier
         fichier.close();
         std::cout << "Le fichier " << nomFichier << ".h a ete cree avec succes." << std::endl;
