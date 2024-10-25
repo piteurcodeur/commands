@@ -4,7 +4,7 @@
 #include <string.h>
 using namespace std;
 
-#define VERSION 1.1f
+#define VERSION 1.2f
 
 std::string setName()
 {
