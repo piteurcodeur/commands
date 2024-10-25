@@ -40,6 +40,7 @@ void createSourceFile(std::string nomFichier)
         fichier << "#include <stdio.h>\n";
         fichier << "#include <stdlib.h>\n\n";
 
+        fichier << "#endif //"<< toUpper(nomFichier.data()) << "_H" << endl;
         // Ferme le fichier
         fichier.close();
         std::cout << "Le fichier " << nomFichier << ".h a ete cree avec succes." << std::endl;
